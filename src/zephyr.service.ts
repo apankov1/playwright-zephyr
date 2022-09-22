@@ -26,7 +26,7 @@ export class ZephyrService {
       throw new Error('"user" and/or "password" or "authorizationToken" options are missed. Please provide them in the config');
 
     this.host = options.host;
-    this.url = `${this.host}/rest/atm/1.0`;
+    this.url = `${this.host}/v2`;
     this.user = options.user!;
     this.password = options.password!;
     this.basicAuthToken = Buffer.from(`${this.user}:${this.password}`).toString('base64');
